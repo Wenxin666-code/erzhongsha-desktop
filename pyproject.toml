@@ -1,0 +1,30 @@
+[project]
+name = "erzhongsha-desktop"
+version = "0.1.0"
+description = "二中杀桌面单机版（历史源码的独立维护版本）"
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "pygame-ce==2.5.7",
+    "pydantic==2.13.4",
+    "pyyaml==6.0.3",
+]
+
+[dependency-groups]
+dev = ["pytest>=8,<9", "ruff>=0.11,<1"]
+build = ["pyinstaller>=6,<7"]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+target-version = "py311"
+include = ["*.py", "*.pyi", "**/pyproject.toml"]
+
+[tool.ruff.lint]
+# 先守住致命语法/控制流错误，不用批量格式化掩盖环境迁移的差异。
+select = ["E9", "F63", "F7", "F82"]

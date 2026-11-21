@@ -1,0 +1,11 @@
+name: sanguosha
+channels:
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - pygame-ce==2.5.7
+      - pydantic==2.13.4
+      - pyyaml==6.0.3
+

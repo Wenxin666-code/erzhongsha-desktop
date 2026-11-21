@@ -1,0 +1,37 @@
+二中杀：曾推送版本的独立单机源码
+================================
+
+导出日期：2026-10-18
+来源：D:\erzhongsha 的本地 Git 历史；不依赖当前 GitHub 登录状态。
+原远程地址：https://github.com/wenxinyiyan961/erzhongsha.git
+提交：193a6b522966df0b0906a9f37d12463eef32ac67
+提交日期：2026-07-27 22:13:37 +08:00
+提交说明：初始提交
+
+本地 origin/main 指向此提交，reflog 保留 update by push 记录。
+这证明本地有此版本的推送记录，不是本轮重新从 GitHub 下载，也不能证明远程现在仍可访问。
+
+内容与核验
+----------
+完整保留该提交的 3549 个文件及原始目录，包括 main.py、src、data、images、sound、
+assets、tests、编程规范、环境配置及历史发行文件。没有混入当前联机重构代码。
+素材库 assets 中原来未实际使用的素材也按历史原样保留；未擅自筛选、移动或删除。
+所有 3549 个历史文件逐个计算 Git blob 哈希，与该提交全部一致，包含原始换行。
+本说明是导出时唯一额外新增的文件，不属于历史提交。
+
+本目录是独立文件副本，不是 Git 工作树，没有复制 .git；原项目的当前代码与历史均未修改。
+这份源码不保证等同于 2026-07-28 录像中的最后单机版本；只保证对应上述确切提交。
+
+入口
+----
+main.py：原来的桌面游戏入口。
+src：原来的规则、AI、技能等源码。
+data：武将及卡牌配置。
+images、sound：正式图片与声音目录。
+environment.yml：该版本保存的 Python 环境要求。
+
+本机现有 sanguosha 环境的手动启动方式（在 PowerShell 中逐行执行）：
+Set-Location -LiteralPath 'D:\erzhongsha-单机源码-20260727'
+& 'D:\Anaconda\envs\sanguosha\python.exe' main.py
+
+本轮只做历史导出和文件完整性核验，没有启动游戏、安装依赖或执行完整对局测试。

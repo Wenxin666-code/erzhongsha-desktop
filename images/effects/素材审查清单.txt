@@ -1,0 +1,44 @@
+emotion 动画素材复查清单
+=======================
+
+完整整理结果：
+
+源 emotion 的 19 个一级目录已经全部镜像到 images/effects，包括此前遗漏的
+remove（17 帧）、seat（7 帧）和 skin_changing（6 帧）。armor、weapon
+内部目录及根目录单图也已完整保留；“已整理”与“已接入运行规则”是两件事。
+
+已接入卡牌事件：
+
+analeptic、duel、fire_slash、jink、peach、slash_black、
+slash_red、thunder_slash
+
+已接入规则事件：
+
+damage：受到伤害
+judgegood：判定生效，逐帧绿色勾覆盖中央判定牌
+judgebad：判定不生效，逐帧红叉覆盖中央判定牌
+killer：角色阵亡
+chain：铁索连环对每名目标实际切换横置/重置状态时，在该目标处播放
+
+已接入防具和武器：
+
+armor/eight_diagram、armor/renwang_shield、armor/silver_lion、
+armor/vine、armor/vineburn，以及 weapon 下当前实现的各武器动画。
+藤甲受到火焰伤害并增加伤害时使用 vineburn，不再错误使用普通 vine。
+
+已整理但暂未绑定：
+
+success、no-success：含义过于通用，等待具体技能规定成功/失败展示时使用。
+armor/PeaceSpell.png：太平要术素材；当前牌堆没有该装备。
+weapon/dragonphoenix.png：龙凤双股剑素材；当前牌堆没有该装备。
+
+经复查暂不使用：
+
+remove：移除武将展示；当前没有移除武将机制。
+seat：座次动画；当前 1v1 固定座次不需要。
+skin_changing：换肤动画；当前没有换肤功能。
+
+原则：
+
+动画只能绑定含义明确且已经发生的规则事件。不能因为素材存在，就把换肤、
+座次、移除武将等动画误用到普通出牌或伤害流程。

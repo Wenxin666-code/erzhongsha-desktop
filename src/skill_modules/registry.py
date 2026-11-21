@@ -1,0 +1,90 @@
+"""武将技能模块注册表。"""
+
+from src.skill_modules.general.caocao.jianxiong import (
+    JIANXIONG_DEFINITION, JIANXIONG_HANDLER,
+)
+from src.skill_modules.general.guanyu.wusheng import (
+    WUSHENG_DEFINITION, WUSHENG_HANDLER,
+)
+from src.skill_modules.general.dingyichen import (
+    KISS_DEFINITION, KISS_HANDLER, YINHE_LORD_DEFINITION,
+    YINHE_LORD_HANDLER,
+)
+from src.skill_modules.general.liutongyu import (
+    JINREN_DEFINITION, JINREN_HANDLER, THIS_IS_NONSENSE_DEFINITION,
+    THIS_IS_NONSENSE_HANDLER, WILD_ASSOCIATION_DEFINITION,
+    WILD_ASSOCIATION_HANDLER,
+)
+from src.skill_modules.general.zhangyiyan import (
+    ERWO_TONGXIN_DEFINITION, ERWO_TONGXIN_HANDLER,
+    XIAOYE_SHIYI_DEFINITION, XIAOYE_SHIYI_HANDLER,
+)
+from src.skill_modules.general.wangzhongwei import (
+    STUDY_1_4_DEFINITION, STUDY_1_4_HANDLER,
+    WEISHEN_DEFINITION, WEISHEN_HANDLER,
+)
+from src.skill_modules.general.sunqinke import (
+    KONGJU_DEFINITION, KONGJU_HANDLER,
+    NOVEL_DEFINITION, NOVEL_HANDLER,
+    SUNSUN_DEFINITION, SUNSUN_HANDLER,
+)
+from src.skill_modules.general.xuxinlin import (
+    LVFEI_DEFINITION, LVFEI_HANDLER,
+    SHENSHEN_DEFINITION, SHENSHEN_HANDLER,
+    ZHANGLINGHE_DEFINITION, ZHANGLINGHE_HANDLER,
+)
+
+
+GENERAL_SKILL_DEFINITIONS = (
+    WUSHENG_DEFINITION,
+    JIANXIONG_DEFINITION,
+    YINHE_LORD_DEFINITION,
+    KISS_DEFINITION,
+    THIS_IS_NONSENSE_DEFINITION,
+    WILD_ASSOCIATION_DEFINITION,
+    JINREN_DEFINITION,
+    ERWO_TONGXIN_DEFINITION,
+    XIAOYE_SHIYI_DEFINITION,
+    STUDY_1_4_DEFINITION,
+    WEISHEN_DEFINITION,
+    NOVEL_DEFINITION,
+    SUNSUN_DEFINITION,
+    KONGJU_DEFINITION,
+    ZHANGLINGHE_DEFINITION,
+    LVFEI_DEFINITION,
+    SHENSHEN_DEFINITION,
+)
+
+TRIGGERED_SKILL_HANDLERS = {
+    handler.definition.skill_id: handler
+    for handler in (
+        JIANXIONG_HANDLER, YINHE_LORD_HANDLER, THIS_IS_NONSENSE_HANDLER,
+        ERWO_TONGXIN_HANDLER,
+        STUDY_1_4_HANDLER,
+        NOVEL_HANDLER, SUNSUN_HANDLER,
+        ZHANGLINGHE_HANDLER, LVFEI_HANDLER, SHENSHEN_HANDLER,
+    )
+}
+
+ACTIVE_SKILL_HANDLERS = {
+    handler.definition.skill_id: handler
+    for handler in (XIAOYE_SHIYI_HANDLER, WEISHEN_HANDLER)
+}
+
+CONVERSION_SKILL_HANDLERS = {
+    handler.definition.skill_id: handler
+    for handler in (
+        WUSHENG_HANDLER, WILD_ASSOCIATION_HANDLER, JINREN_HANDLER,
+        ZHANGLINGHE_HANDLER,
+    )
+}
+
+JUDGMENT_REPLACEMENT_SKILL_HANDLERS = {
+    handler.definition.skill_id: handler
+    for handler in (KISS_HANDLER,)
+}
+
+TARGET_PROHIBITION_SKILL_HANDLERS = {
+    handler.definition.skill_id: handler
+    for handler in (KONGJU_HANDLER,)
+}
