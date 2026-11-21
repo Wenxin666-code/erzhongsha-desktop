@@ -5,7 +5,14 @@
 DIY武将使用文字牌面，缺少的专属语音静默跳过；无需额外下载私人素材。
 项目元数据版本 `0.1.0` 表示本次独立维护起点，不代表曾发布的安装包版本。
 
-## 运行（Windows）
+## 游戏下载
+
+[下载 Windows 64位免安装版](https://github.com/Wenxin666-code/erzhongsha-desktop/releases/latest/download/Erzhongsha-windows-x64.zip) · [版本与更新记录](https://github.com/Wenxin666-code/erzhongsha-desktop/releases)
+
+完整解压后，打开“二中杀”文件夹，双击 `二中杀.exe` 即可游玩，无需安装 Python。
+请保留同目录下的 `_internal` 文件夹。依次为两个座位选将，进入对局后二号位由 AI 控制。
+
+## 源码运行（Windows）
 
 已安装 uv 后，在 PowerShell 执行：
 
