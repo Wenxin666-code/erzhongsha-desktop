@@ -114,7 +114,16 @@ KC_LIGHT = {
 SS = {"spade":"♠","heart":"♥","club":"♣","diamond":"♦"}
 SUIT_CN = {"spade":"黑桃","heart":"红桃","club":"梅花","diamond":"方块"}
 SC = {"spade":(20,20,20),"heart":(180,30,30),"club":(20,20,20),"diamond":(180,30,30)}
-FONT = "C:/Windows/Fonts/simhei.ttf"
+def _resolve_ui_font():
+    preferred = Path("C:/Windows/Fonts/simhei.ttf")
+    if preferred.is_file():
+        return str(preferred)
+    return pygame.font.match_font(
+        "microsoftyahei,msyahei,simsun,dengxian,notosanscjksc,wenquanyizenhei"
+    )
+
+
+FONT = _resolve_ui_font()
 
 # ========== 布局常量 ==========
 # 参考端游牌桌：中央留给战场，右侧日志，底部手牌与操作区
